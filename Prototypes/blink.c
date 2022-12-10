@@ -58,7 +58,7 @@ void menu() {
 // loading phase all LED turn on
 void loadingPhase() {
 	on(0);
-	delay (3000);
+	delay (10000);
 	off(0);
 }
 
@@ -101,18 +101,22 @@ void dispensePhase() {
 	scanf("%s", input);
 	
 	if (!strcmp(input, "123")) {
-		off(0);
-		on(0);
-		delay(300);
-		off(0);
-		delay(100);
-		on(0);
-		delay(300);
-		off(0);
-		delay(100);
-		on(0);
-		delay(300);
-		off(0);		
+		int count = 0;
+		while (count < 5)
+		{
+			off(0);
+			on(0);
+			delay(300);
+			off(0);
+			delay(100);
+			on(0);
+			delay(300);
+			off(0);
+			delay(100);
+			on(0);
+			delay(300);
+			off(0);	
+		}
 	}
 	else
 		printf("wrong input\n");
